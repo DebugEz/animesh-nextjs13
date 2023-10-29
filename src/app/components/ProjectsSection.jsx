@@ -7,57 +7,125 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
-    image: "/images/projects/1.png",
+    title: "Food Delivery App",
+    description: "React Redux Tailwind Css Firebase StripPayment",
+    image: "/images/projects/p1.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/BeardbabaJS/food-delivery24",
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
-    image: "/images/projects/2.png",
+    title: "Ai Summarizer",
+    description: "React Redux opeanAPI",
+    image: "/images/projects/p2.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/BeardbabaJS/aisummary",
   },
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
-    image: "/images/projects/3.png",
+    title: "NewsHamster Website",
+    description: "React Redux NewsAPI",
+    image: "/images/projects/p3.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/BeardbabaJS/Newsxhamster",
   },
   {
     id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
-    image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
+    title: "3D Portfolio",
+    description: "React Framer-Motion Three-js",
+    image: "/images/projects/p4.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/BeardbabaJS/portfolio-me",
   },
   {
     id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
-    image: "/images/projects/5.png",
+    title: "Facebook Landing Page",
+    description: "Tailwind Css",
+    image: "/images/projects/p5.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/BeardbabaJS/facebook",
   },
   {
     id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
-    image: "/images/projects/6.png",
+    title: "Microsoft Landing Page",
+    description: "Tailwind Css",
+    image: "/images/projects/p6.png",
     tag: ["All", "Web"],
     gitUrl: "/",
-    previewUrl: "/",
+  },
+  {
+    id: 7,
+    title: "CloudNotes",
+    description: "React Redux Mongodb",
+    image: "/images/projects/p7.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/BeardbabaJS/cloudnotes",
+  },
+  {
+    id: 8,
+    title: "ScholarSpace",
+    description: "HTML Css Javascript",
+    image: "/images/projects/p8.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/BeardbabaJS/education.github.io",
+  },
+  {
+    id: 9,
+    title: "Artistry Studio",
+    description: "HTML Css Javascript",
+    image: "/images/projects/p9.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/BeardbabaJS/ArtistryStudio.github.io",
+  },
+  {
+    id: 10,
+    title: "SEO Website",
+    description: "Project 5 description",
+    image: "/images/projects/p10.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/BeardbabaJS/seo.github.io",
+  },
+  {
+    id: 11,
+    title: "FoodHunt",
+    description: "Design of Landing Page",
+    image: "/images/projects/p11.png",
+    tag: ["All", "UI/UX Design"],
+    gitUrl: "https://www.figma.com/file/watfoqZWgf4a5RpP98TQ5z/Food-web-app-design?type=design&t=X0hqmvdxo7LouY7d-6",
+  },
+  {
+    id: 12,
+    title: "Valorant",
+    description: "Design of Character Page",
+    image: "/images/projects/p12.png",
+    tag: ["All", "UI/UX Design"],
+    gitUrl: "https://www.figma.com/file/l8vf3XbxoNbVyYdyA8o9BL/Valorant-Agent-Select-Screen-Kit-(Community)?type=design&t=X0hqmvdxo7LouY7d-6",
+  },
+  {
+    id: 13,
+    title: "Circle",
+    description: "Design of Coversion rate Website",
+    image: "/images/projects/p13.png",
+    tag: ["All", "UI/UX Design"],
+    gitUrl: "https://www.figma.com/file/2iS2mSWozc23UXGlzz37Or/Brand-Design?type=design&t=X0hqmvdxo7LouY7d-6",
+
+  },
+  {
+    id: 14,
+    title: "Music Website",
+    description: "Landing page of Music Website",
+    image: "/images/projects/p14.png",
+    tag: ["All", "UI/UX Design"],
+    gitUrl: "https://www.figma.com/file/haNvlFGnW0DQRgdycrT0PD/Headphone?type=design&t=X0hqmvdxo7LouY7d-6",
+
+  },
+  {
+    id: 15,
+    title: "Social Media App",
+    description: "Design of Full App",
+    image: "/images/projects/p15.png",
+    tag: ["All", "UI/UX Design"],
+    gitUrl: "https://www.figma.com/file/KrlHsjPeEQs6P7qKto6Wza/Social-Media?type=design&t=X0hqmvdxo7LouY7d-6",
   },
 ];
 
@@ -97,8 +165,8 @@ const ProjectsSection = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
+          name="UI/UX"
+          isSelected={tag === "UI/UX Design"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
@@ -116,7 +184,6 @@ const ProjectsSection = () => {
               description={project.description}
               imgUrl={project.image}
               gitUrl={project.gitUrl}
-              previewUrl={project.previewUrl}
             />
           </motion.li>
         ))}
