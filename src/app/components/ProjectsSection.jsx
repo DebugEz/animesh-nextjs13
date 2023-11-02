@@ -7,46 +7,54 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "Food Delivery App",
-    description: "React Redux Tailwind Css Firebase StripPayment",
-    image: "/images/projects/p1.png",
+    title: "Full stack social Media App (SnapFusion)",
+    description: "React TypeScript AppWrite",
+    image: "/images/projects/p16.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/BeardbabaJS/food-delivery24",
+    gitUrl: "https://github.com/DebugEz/snapfusion-s-f",
   },
   {
     id: 2,
+    title: "Full Stack Food Delivery App",
+    description: "React Redux Tailwind Css Firebase StripPayment",
+    image: "/images/projects/p1.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/DebugEz/food-delivery24",
+  },
+  {
+    id: 3,
     title: "Ai Summarizer",
     description: "React Redux opeanAPI",
     image: "/images/projects/p2.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/BeardbabaJS/aisummary",
+    gitUrl: "https://github.com/DebugEz/aisummary",
   },
   {
-    id: 3,
+    id: 4,
     title: "NewsHamster Website",
     description: "React Redux NewsAPI",
     image: "/images/projects/p3.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/BeardbabaJS/Newsxhamster",
+    gitUrl: "https://github.com/DebugEz/Newsxhamster",
   },
   {
-    id: 4,
+    id: 5,
     title: "3D Portfolio",
     description: "React Framer-Motion Three-js",
     image: "/images/projects/p4.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/BeardbabaJS/portfolio-me",
+    gitUrl: "https://github.com/DebugEz/portfolio-me",
   },
   {
-    id: 5,
+    id: 6,
     title: "Facebook Landing Page",
     description: "Tailwind Css",
     image: "/images/projects/p5.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/BeardbabaJS/facebook",
+    gitUrl: "https://github.com/DebugEz/facebook",
   },
   {
-    id: 6,
+    id: 7,
     title: "Microsoft Landing Page",
     description: "Tailwind Css",
     image: "/images/projects/p6.png",
@@ -54,39 +62,39 @@ const projectsData = [
     gitUrl: "/",
   },
   {
-    id: 7,
+    id: 8,
     title: "CloudNotes",
     description: "React Redux Mongodb",
     image: "/images/projects/p7.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/BeardbabaJS/cloudnotes",
+    gitUrl: "https://github.com/DebugEz/cloudnotes",
   },
   {
-    id: 8,
+    id: 9,
     title: "ScholarSpace",
     description: "HTML Css Javascript",
     image: "/images/projects/p8.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/BeardbabaJS/education.github.io",
+    gitUrl: "https://github.com/DebugEz/education.github.io",
   },
   {
-    id: 9,
+    id: 10,
     title: "Artistry Studio",
     description: "HTML Css Javascript",
     image: "/images/projects/p9.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/BeardbabaJS/ArtistryStudio.github.io",
+    gitUrl: "https://github.com/DebugEz/ArtistryStudio.github.io",
   },
   {
-    id: 10,
+    id: 11,
     title: "SEO Website",
     description: "Project 5 description",
     image: "/images/projects/p10.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/BeardbabaJS/seo.github.io",
+    gitUrl: "https://github.com/DebugEz/seo.github.io",
   },
   {
-    id: 11,
+    id: 12,
     title: "FoodHunt",
     description: "Design of Landing Page",
     image: "/images/projects/p11.png",
@@ -94,7 +102,7 @@ const projectsData = [
     gitUrl: "https://www.figma.com/file/watfoqZWgf4a5RpP98TQ5z/Food-web-app-design?type=design&t=X0hqmvdxo7LouY7d-6",
   },
   {
-    id: 12,
+    id: 13,
     title: "Valorant",
     description: "Design of Character Page",
     image: "/images/projects/p12.png",
@@ -102,7 +110,7 @@ const projectsData = [
     gitUrl: "https://www.figma.com/file/l8vf3XbxoNbVyYdyA8o9BL/Valorant-Agent-Select-Screen-Kit-(Community)?type=design&t=X0hqmvdxo7LouY7d-6",
   },
   {
-    id: 13,
+    id: 14,
     title: "Circle",
     description: "Design of Coversion rate Website",
     image: "/images/projects/p13.png",
@@ -111,7 +119,7 @@ const projectsData = [
 
   },
   {
-    id: 14,
+    id: 15,
     title: "Music Website",
     description: "Landing page of Music Website",
     image: "/images/projects/p14.png",
@@ -120,7 +128,7 @@ const projectsData = [
 
   },
   {
-    id: 15,
+    id: 16,
     title: "Social Media App",
     description: "Design of Full App",
     image: "/images/projects/p15.png",
@@ -154,17 +162,17 @@ const ProjectsSection = () => {
       </h2>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
-          onClick={handleTagChange}
+          onClick={() => handleTagChange("All")}
           name="All"
           isSelected={tag === "All"}
         />
         <ProjectTag
-          onClick={handleTagChange}
+          onClick={() => handleTagChange("Web")}
           name="Web"
           isSelected={tag === "Web"}
         />
         <ProjectTag
-          onClick={handleTagChange}
+          onClick={() => handleTagChange("UI/UX Design")}
           name="UI/UX"
           isSelected={tag === "UI/UX Design"}
         />
